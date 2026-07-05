@@ -1,97 +1,96 @@
 # Three Minutes Away Books
 
-This repo now contains only the permanent `/books/` activity platform for printed QR-code URLs.
+This repo now contains only the permanent root activity platform for printed QR-code URLs.
 
 Public URL format:
 
 ```text
-/books/?book=BOOKCODE&page=PAGENUMBER
+/?book=BOOKCODE&page=PAGENUMBER
 ```
 
 Examples:
 
 ```text
-/books/?book=oops&page=7
-/books/?book=birds&page=12
+/?book=oops&page=7
+/?book=birds&page=12
 ```
 
 Important:
-- There is no root landing page anymore.
-- The only HTML entry file is `books/index.html`.
-- `books/index.html` is required so GitHub Pages can serve `/books/`.
+- There is no root landing page beyond the app itself.
+- The only HTML entry file is `index.html`.
+- `index.html` is the app entry for the books subdomain.
 - Images should be external URLs inside the page data files.
 
 ## Remaining structure
 
 ```text
-books/
-  index.html
-  assets/
-    css/
-      common.css
-      quiz.css
-      game1.css
-      game2.css
-      game3.css
-      match.css
-    js/
-      core/
-        loader.js
-        router.js
-        utils.js
-      templates/
-        quiz/render.js
-        game1/render.js
-        game2/render.js
-        game3/render.js
-        match/render.js
-    data/
-      _starter-templates/
-      oops/
-      birds/
-      kings/
+index.html
+assets/
+  css/
+    common.css
+    quiz.css
+    game1.css
+    game2.css
+    game3.css
+    match.css
+  js/
+    core/
+      loader.js
+      router.js
+      utils.js
+    templates/
+      quiz/render.js
+      game1/render.js
+      game2/render.js
+      game3/render.js
+      match/render.js
+  data/
+    _starter-templates/
+    oops/
+    birds/
+    kings/
 ```
 
 ## What each part does
 
-- `books/index.html`
+- `index.html`
   The one master runtime page for every QR code URL.
 
-- `books/assets/js/core/router.js`
+- `assets/js/core/router.js`
   Reads `book` and `page` from the URL, loads the matching page data file, then loads the correct activity renderer.
 
-- `books/assets/js/core/loader.js`
+- `assets/js/core/loader.js`
   Loads page data scripts, renderer scripts, and activity CSS files.
 
-- `books/assets/js/core/utils.js`
+- `assets/js/core/utils.js`
   Shared helper functions used by every activity type.
 
-- `books/assets/js/templates/{type}/render.js`
+- `assets/js/templates/{type}/render.js`
   The actual UI and logic for one activity type.
   Example: quiz behavior lives in `templates/quiz/render.js`.
 
-- `books/assets/css/{type}.css`
+- `assets/css/{type}.css`
   Visual styling for one activity type.
   A CSS file is auto-loaded when that activity type is used.
 
-- `books/assets/data/{book}/page-{number}.js`
+- `assets/data/{book}/page-{number}.js`
   One printed book page = one data file.
   This is where you will spend most of your time.
 
-- `books/assets/data/_starter-templates/`
+- `assets/data/_starter-templates/`
   Copy-paste starter files for authoring content.
   These are not render engines.
 
 ## How to create a new quiz page
 
 Example:
-Create `/books/?book=oops&page=7`
+Create `/?book=oops&page=7`
 
 1. Copy:
-   `books/assets/data/_starter-templates/quiz-template.js`
+   `assets/data/_starter-templates/quiz-template.js`
 
 2. Save the copy as:
-   `books/assets/data/oops/page-7.js`
+   `assets/data/oops/page-7.js`
 
 3. Edit these top-level fields:
    - `book: "oops"`
@@ -115,7 +114,7 @@ Create `/books/?book=oops&page=7`
 6. Use the final URL:
 
 ```text
-/books/?book=oops&page=7
+/?book=oops&page=7
 ```
 
 You do not need to edit the router or renderer for a normal new quiz page.
@@ -126,10 +125,10 @@ Example:
 Create a `game3` page for `oops` page 8.
 
 1. Copy:
-   `books/assets/data/_starter-templates/game3-template.js`
+   `assets/data/_starter-templates/game3-template.js`
 
 2. Save it as:
-   `books/assets/data/oops/page-8.js`
+   `assets/data/oops/page-8.js`
 
 3. Set:
    - `book: "oops"`
@@ -141,7 +140,7 @@ Create a `game3` page for `oops` page 8.
 5. Open:
 
 ```text
-/books/?book=oops&page=8
+/?book=oops&page=8
 ```
 
 Again, you do not need to change the renderer when you are only creating a new page using an existing activity type.
@@ -152,7 +151,7 @@ Example:
 You want a new type called `quiz2`.
 
 1. Create a renderer:
-   `books/assets/js/templates/quiz2/render.js`
+   `assets/js/templates/quiz2/render.js`
 
 2. In that file, register the renderer as:
 
@@ -165,16 +164,16 @@ window.BookPlatform.templates.quiz2 = function renderQuiz2(context) {
 ```
 
 3. Create its CSS file:
-   `books/assets/css/quiz2.css`
+   `assets/css/quiz2.css`
 
 4. Create an authoring starter file:
-   `books/assets/data/_starter-templates/quiz2-template.js`
+   `assets/data/_starter-templates/quiz2-template.js`
 
 5. In that starter file, use:
    `type: "quiz2"`
 
 6. Create actual page files such as:
-   `books/assets/data/oops/page-9.js`
+   `assets/data/oops/page-9.js`
 
 7. In that page file, set:
    `type: "quiz2"`
@@ -182,11 +181,11 @@ window.BookPlatform.templates.quiz2 = function renderQuiz2(context) {
 8. Open:
 
 ```text
-/books/?book=oops&page=9
+/?book=oops&page=9
 ```
 
 Notes:
-- You do not need to edit `books/index.html` for a new activity type now.
+- You do not need to edit `index.html` for a new activity type now.
 - The router will load `templates/quiz2/render.js`.
 - The loader will also try to load `css/quiz2.css`.
 
@@ -201,16 +200,16 @@ Notes:
 
 ## Sample page files already present
 
-- `books/assets/data/oops/page-1.js`
-- `books/assets/data/oops/page-2.js`
-- `books/assets/data/oops/page-3.js`
-- `books/assets/data/birds/page-1.js`
-- `books/assets/data/birds/page-2.js`
+- `assets/data/oops/page-1.js`
+- `assets/data/oops/page-2.js`
+- `assets/data/oops/page-3.js`
+- `assets/data/birds/page-1.js`
+- `assets/data/birds/page-2.js`
 
 ## Hosting note
 
 For GitHub Pages with your custom domain, the important live entry path remains:
 
 ```text
-https://www.threeminutesaway.com/books/?book=oops&page=1
+https://books.threeminutesaway.com/?book=oops&page=1
 ```
