@@ -1,12 +1,12 @@
 window.BookPlatform.registerPageData({
   book: "kings",
-  page: 34,
-  title: "Kings Page 34 Quiz",
+  page: 35,
+  title: "Kings Page 35 Quiz",
   type: "quiz",
   metaDescription: "Lessons from Indian Kings- Threeminutesaway books",
   metaImage: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
   payload: {
-    activityTitle: "Maharana Pratap | Page 34",
+    activityTitle: "Maharana Pratap | Page 35",
     completion: {
       title: "Great job!",
       message: "Great stories end, but their lessons stay with us!"

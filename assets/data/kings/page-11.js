@@ -1,7 +1,7 @@
 window.BookPlatform.registerPageData({
   book: "kings",
-  page: 7,
-  title: "Kings Page 7 Quiz",
+  page: 11,
+  title: "Kings Page 11 Quiz",
   type: "quiz",
   metaDescription: "Lessons from Indian Kings- Threeminutesaway books",
   metaImage: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
