@@ -13,7 +13,7 @@ window.BookPlatform.registerPageData({
     },
     questions: [
   {
-    image: "",
+    image: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
     imageAlt: "Young King Bimbisara illustration",
     question: "How old was Bimbisara when he became king of Magadha?",
     correct: "Fifteen years old",
@@ -25,7 +25,7 @@ window.BookPlatform.registerPageData({
     ]
   },
   {
-    image: "",
+    image: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
     imageAlt: "Bimbisara discussing plans with his advisers",
     question: "Besides fighting wars, how did Bimbisara expand his kingdom?",
     correct: "Through diplomacy and alliances",
@@ -37,7 +37,7 @@ window.BookPlatform.registerPageData({
     ]
   },
   {
-    image: "",
+    image: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
     imageAlt: "Bimbisara forming a peaceful alliance",
     question: "What does the word “diplomacy” mean in Bimbisara’s story?",
     correct: "Solving problems through discussion and cooperation",
@@ -49,7 +49,7 @@ window.BookPlatform.registerPageData({
     ]
   },
   {
-    image: "",
+    image: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
     imageAlt: "Map showing Magadha and its neighbouring kingdoms",
     question: "Which kingdom did Bimbisara defeat and add to Magadha?",
     correct: "Anga",
@@ -61,7 +61,7 @@ window.BookPlatform.registerPageData({
     ]
   },
   {
-    image: "",
+    image: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
     imageAlt: "Ancient Rajagriha surrounded by hills",
     question: "Why was Rajagriha a safe place for Bimbisara’s capital?",
     correct: "It was surrounded by hills and protected by stone walls",
@@ -73,7 +73,7 @@ window.BookPlatform.registerPageData({
     ]
   },
   {
-    image: "",
+    image: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
     imageAlt: "Bimbisara meeting Prince Siddhartha",
     question: "What did Bimbisara offer Prince Siddhartha after being impressed by him?",
     correct: "Half of his kingdom",
@@ -85,7 +85,7 @@ window.BookPlatform.registerPageData({
     ]
   },
   {
-    image: "",
+    image: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
     imageAlt: "Prince Siddhartha calmly speaking to Bimbisara",
     question: "Why did Siddhartha refuse Bimbisara’s offer?",
     correct: "He wanted to find the path to enlightenment",
@@ -97,7 +97,7 @@ window.BookPlatform.registerPageData({
     ]
   },
   {
-    image: "",
+    image: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
     imageAlt: "Bimbisara and his queen supporting Buddhist monks",
     question: "How did Bimbisara support the Buddha’s teachings?",
     correct: "He supported monasteries and helped spread the teachings",
@@ -109,7 +109,7 @@ window.BookPlatform.registerPageData({
     ]
   },
   {
-    image: "",
+    image: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
     imageAlt: "Bimbisara choosing peace instead of battle",
     question: "Two neighbouring kingdoms disagree with Bimbisara. What would he most likely try first?",
     correct: "Talk to them and find a peaceful solution",
@@ -121,7 +121,7 @@ window.BookPlatform.registerPageData({
     ]
   },
   {
-    image: "",
+    image: "https://ik.imagekit.io/Threeminutesaway/Books/Kings/Question.jpg",
     imageAlt: "Bimbisara respectfully greeting the Buddha",
     question: "What is the biggest lesson children can learn from Bimbisara’s story?",
     correct: "Wisdom and respect can be more powerful than force",
